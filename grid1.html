@@ -1,0 +1,144 @@
+<!doctype html>
+
+<head>
+    <style>
+        /* ===========================================================
+        ===  [BEGIN]     GRID LAYOUT STYLES  
+        =============================================================*/
+        body {
+            display: grid;
+            grid-template-areas:
+                "header        header    header"
+                "nav           nav       nav"
+                "left-aside    main      right-aside"
+                "footer        footer    footer";
+
+            grid-template-rows:
+                80px 30px 1fr 40px;
+
+            grid-template-columns:
+                20% 1fr 15%;
+
+            height: 100vh;
+            gap: 3px;
+            margin: 30px;
+
+        }
+
+        header.pageHeader {
+            grid-area: header;
+        }
+
+        nav.pageNav {
+            grid-area: nav;
+        }
+
+        aside.pageLeftAside {
+            grid-area: left-aside;
+        }
+
+        aside.pageRightAside {
+            grid-area: right-aside;
+        }
+
+        main.pageMain {
+            grid-area: main;
+        }
+
+        footer.pageFooter {
+            grid-area: footer;
+        }
+
+        header.pageHeader,
+        nav.pageNav,
+        aside.pageLeftAside,
+        aside.pageRightAside,
+        main.pageMain,
+        footer.pageFooter {
+            padding: 5px;
+            background: var(--grid-area-bg-color);
+            color: rgb(10, 3, 73);
+            text-shadow: rgb(21, 2, 107);
+            text-align: center;
+
+            border-radius: 3px;
+            border-width: 1px;
+            border-color: white;
+            border-style: solid;
+            box-shadow: black;
+
+            color: white;
+
+        }
+
+        main.pageMain {
+            padding: 15px;
+        }
+
+        @media only screen and (max-width : 700px) {
+            body {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "left-aside"
+                    "footer";
+                grid-template-rows: 40px 20px 1fr 40px 70px;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===========================================================
+        ===  [END]     GRID LAYOUT STYLES  
+        =============================================================*/
+
+
+
+        /* ===========================================================
+        ===  [BEGIN]     COLOR STYLES  
+        =============================================================*/
+        :root {
+            --grid-area-bg-color: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            --grid-area-bg-color: linear-gradient(135deg, rgba(167, 207, 223, 1) 0%, rgba(35, 83, 138, 1) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+
+
+
+        body {
+            background: rgb(70, 70, 199);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        /* ===========================================================
+        ===  [END]    COLOR STYLES  
+        =============================================================*/
+
+        p {
+            font-size: 12px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="pageHeader">Header</header>
+    <nav class="pageNav">Navigator</nav>
+    <aside class="pageLeftAside">Left Aside</aside>
+    <aside class="pageRightAside">Right Aside</aside>
+    <main class="pageMain">
+        <p>
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+        </p>
+    </main>
+    <footer class="pageFooter">Footer</footer>
+
+</body>
+
+</html>
