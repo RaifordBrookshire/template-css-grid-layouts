@@ -1,0 +1,212 @@
+<!doctype html>
+
+<head>
+    <style>
+        /* ===========================================================
+        ===  [BEGIN]     GRID LAYOUT STYLES  
+        =============================================================*/
+        div.pageContainer {
+            display: grid;
+            grid-template-areas:
+                "header        header    header    header"
+                "nav           nav       nav       nav"
+                "left-aside    main      main      right-aside"
+                "footer        footer    footer    footer";
+
+            grid-template-columns: 225px 1fr 1fr 200px;
+            grid-template-rows: 80px 40px 1fr 60px;
+            min-height: 500px;
+
+            gap: 0px;
+            margin: 0px;
+        }
+
+        /*1200 + default desktops*/
+
+        /*1024 -- ipad pro*/
+        @media (max-width:1024px) {
+            div.pageContainer {
+                grid-template-areas:
+                    "header        header    header    header"
+                    "nav           nav       nav       nav"
+                    "left-aside    main      main      main"
+                    "footer        footer    footer    footer";
+
+                grid-template-columns: 200px 1fr 1fr 1fr;
+                grid-template-rows: 80px 40px 1fr 60px;
+                min-height: 500px;
+            }
+
+            aside.pageRightAside {
+                display: none
+            }
+        }
+
+        /* iPad */
+        @media (max-width:768px) {
+            div.pageContainer {
+                grid-template-areas:
+                    "header        header    header    header"
+                    "nav           nav       nav       nav"
+                    "left-aside    main      main      main"
+                    "footer        footer    footer    footer";
+
+                grid-template-columns: 150px 1fr 1fr 1fr;
+                grid-template-rows: 50px 40px 1fr 60px;
+                min-height: 400px;
+            }
+
+            aside.pageRightAside {
+                display: none
+            }
+        }
+
+        /*414 -iphone 6/7/8/plus  */
+        @media (max-width:414px) {
+            div.pageContainer {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 30px 40px 1fr;
+                min-height: 200px;
+            }
+
+            aside.pageRightAside {
+                display: none
+            }
+
+            aside.pageLeftAside {
+                display: none
+            }
+        }
+
+        /* 375 - iphone 6 */
+        @media (max-width:375px) {
+            div.pageContainer {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 30px 40px 1fr;
+                min-height: 200px;
+            }
+
+            aside.pageRightAside {
+                display: none
+            }
+
+            aside.pageLeftAside {
+                display: none
+            }
+        }
+
+
+        header.pageHeader {
+            grid-area: header;
+        }
+
+        nav.pageNav {
+            grid-area: nav;
+        }
+
+        aside.pageLeftAside {
+            grid-area: left-aside;
+        }
+
+        aside.pageRightAside {
+            grid-area: right-aside;
+        }
+
+        main.pageMain {
+            grid-area: main;           
+        }
+
+        footer.pageFooter {
+            grid-area: footer;
+        }
+
+        header.pageHeader,
+        nav.pageNav,
+        aside.pageLeftAside,
+        aside.pageRightAside,
+        main.pageMain,
+        footer.pageFooter {
+            padding: 5px;
+            background: var(--grid-area-bg-color);
+            color: rgb(10, 3, 73);
+            text-shadow: rgb(21, 2, 107);
+            text-align: center;
+
+            border-radius: 0px;
+            border-width: 1px;
+            border-color: white;
+            border-style: dotted;
+            box-shadow: black;
+
+            color: white;
+
+        }
+
+        main.pageMain {
+            padding: 15px;
+        }
+        /* ===========================================================
+        ===  [END]     GRID LAYOUT STYLES  
+        =============================================================*/
+
+
+
+        /* ===========================================================
+        ===  [BEGIN]     COLOR STYLES  
+        =============================================================*/
+        :root {
+            /*
+            --grid-area-bg-color: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            --grid-area-bg-color: linear-gradient(135deg, rgba(167, 207, 223, 1) 0%, rgba(35, 83, 138, 1) 100%);
+           */
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+            --grid-area-bg-color: linear-gradient(135deg, rgb(50, 50, 255) 0%, rgba(126, 104, 252, 0) 59%);
+
+        }
+
+        body {
+            background: rgb(68, 68, 196);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* ===========================================================
+        ===  [END]    COLOR STYLES  
+        =============================================================*/
+
+        p {
+            font-size: 12px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pageContainer">
+        <header class="pageHeader">Header</header>
+        <nav class="pageNav">Navigator</nav>
+        <aside class="pageLeftAside">Left Aside</aside>
+        <aside class="pageRightAside">Right Aside</aside>
+        <main class="pageMain">
+            <p>
+                Main Body Content Main Body Content Main Body Content Main Body Content
+                Main Body Content Main Body Content Main Body Content Main Body Content
+                Main Body Content Main Body Content Main Body Content Main Body Content Main Body Content
+                Main Body Content Main Body Content Main Body Content Main Body Content
+            </p>
+        </main>
+        <footer class="pageFooter">Footer</footer>
+    </div>
+</body>
+</html>
