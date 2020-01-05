@@ -1,0 +1,176 @@
+<!doctype html>
+
+<head>
+    <style>
+        :root {
+            /* Azure Color Theme */
+            --darkest-themed-color: #2d2100;
+            --dark-themed-color: #0B1C51;
+            --medium-themed-color: #6679B6;
+            --light-themed-color: #A8B0C8;
+
+            --black-themed-color: rgb(14, 4, 49);
+            --white-themed-color: rgb(253, 251, 251);     
+        }
+
+        :root {
+            /* Azure Color Theme */
+            --nav-hover-background-color: var(--light-themed-color);
+            --nav-active-background-color : var(--dark-themed-color);
+            --nav-hover-border-color : var(--black-themed-color);
+            --nav-backgound-color: var(--medium-themed-color);
+            --nav-font-color: var(--darkest-themed-color);
+           
+        }
+
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main.pageMain {
+            padding: 15px;
+        }
+
+        body {
+            background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-color: #cccccc;
+        }
+
+        /* ===========================================================
+        ===  [BEGIN]     GRID Top Nav 
+        =============================================================*/
+        nav.pageNav {
+
+            border: 0px solid;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 10px;
+        }
+
+        nav.pageNav ul {
+            list-style-type: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.pageNav li {
+            display: inline-block;           
+        }
+
+        nav.pageNav li:last-child {
+            border-top: none;
+        }
+
+        nav.pageNav li a {
+            display: block;
+            color: var(--nav-font-color);
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;   
+        }
+
+        nav.pageNav li a.active {
+            background-color: var(--nav-active-background-color);            
+        }
+
+        nav.pageNav li a:hover {
+            background-color: var(--nav-hover-background-color);
+            border-color: var(--nav-hover-border-color);
+            transition-duration: .5s;   
+            text-decoration: underline;           
+        }
+
+        /* ===========================================================
+        ===  [END]     GRID Top Nav style
+        =============================================================*/
+
+
+
+        /* ===========================================================
+        ===  [BEGIN]     COLOR STYLES  
+        =============================================================*/
+        :root {
+            /*
+            --grid-area-bg-color: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            --grid-area-bg-color: linear-gradient(135deg, rgba(167, 207, 223, 1) 0%, rgba(35, 83, 138, 1) 100%);
+           */
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+            --grid-area-bg-color: linear-gradient(135deg, rgb(50, 50, 255) 0%, rgba(126, 104, 252, 0) 59%);
+
+        }
+
+        body {
+            background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-color: red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* ===========================================================
+        ===  [END]    COLOR STYLES  
+        =============================================================*/
+
+        p {
+            font-size: 12px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="pageNav">
+        <ul class="pageNav">
+            <li class="pageNav">
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+            <li>
+                <a href="">Products</a>
+            </li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+            <li>
+                <a href="">about</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main class="pageMain">
+        <p>
+            <img
+                src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+
+            <img
+                src="https://images.pexels.com/photos/1662770/pexels-photo-1662770.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+
+            <img
+                src="https://images.pexels.com/photos/2013671/pexels-photo-2013671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content Main Body Content
+            Main Body Content Main Body Content Main Body Content Main Body Content
+        </p>
+    </main>
+</body>
+
+</html>
